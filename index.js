@@ -1,10 +1,7 @@
 const express = require("express");
 const app = express();
 
+app.get("/", (req, res) => res.send("OK - Hostinger Node App"));
+
 const PORT = process.env.PORT || 3000;
-
-app.get("/", (req, res) => res.send("✅ Express running on Hostinger"));
-
-app.listen(PORT, "0.0.0.0", () => {
-  console.log("Server listening on", PORT);
-});
+app.listen(PORT, "0.0.0.0", () => console.log("Running on port", PORT));
